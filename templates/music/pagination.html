@@ -1,0 +1,17 @@
+{% block content %}
+<div class="">
+    <span class="">
+        {% if page.has_previous %}
+        <a href="?page={{page.has_previous_page_number}}">Arriere</a>
+        {% endif%}
+
+        <span class="">
+        page {{page.number }} de {{page.paginator.num_pages }}.
+        </span>
+
+        {% if page.has_next %}
+        <a href="?page={{ page.has_next_page_number}}">suivant</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock content%}

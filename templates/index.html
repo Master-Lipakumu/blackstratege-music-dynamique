@@ -1,0 +1,79 @@
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BLACK STRATEGE</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%} ">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+        <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}">
+    </head>
+    <body>
+        <header id="imgbcg" style="background-image: url({% static 'img/tratege.jpg'%} ); background-repeat: no-repeat; background-size: cover; height: 90vh; background-position: center;">
+            <div class="content">
+                <div class="nav">
+                    <ul>
+                        <li class="active"><a href="{% url 'index'%}">accueil</a></li>
+                        <li><a href="#videomusic">Musique</a></li>
+                        <li><a href="{% url 'contacte'%}">contacte</a></li>
+                    </ul>
+                    <h1 class="logo"><a href="{% url 'index'%}">Black Stratege</a></h1>
+                </div>
+                <div class="container">
+                    <div class="content">
+                        <div class="row">
+                            <h2 class="firsttitle">SITE WEB OFFICIEL DE BLACK STRATEGE </h2>
+
+                            <h3 class="secondtitle">DECOUVREZ LA PASSION MUSICAL</h3>
+
+                            <P class="slogan">Artistes, auteurs, compositeurs et chanteurs .</P>
+
+                            <br>
+
+                            <div class="col-md-3">
+								<button type="button" class="btn mb-2 mb-md-0 btn-outline-success btn-block"><a href="#videomusic">Musique</button>
+							</div>
+
+                            <div class="col-md-3">
+								<button type="button" class="btn mb-2 mb-md-0 btn-outline-success btn-block"><a href="{% url 'contacte'%}">Contacte</button>
+							</div>
+
+                            <div class="col-md-3 col-6 col-xl-6">
+								<button type="button" class="btn mb-2 mb-md-0 btn-outline-success btn-block"><a href="#">créé votre propre site web</button>
+							</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="content" style="width:80px;height:50px;color:blue;font-size:40px;">
+                    
+                    <a href="#" style="text-decoration:none;color:skyblue;"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.youtube.com/channel/UC-qEAcu28F9pLy8qc2FV-sw" blank="True" style="text-decoration:none;color:red;"><i class="fab fa-youtube"></i></a>
+                    <a href="#" style="text-decoration:none;color:purple;"><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://www.facebook.com/stratege.black" blank="True"><i class="fab fa-facebook"></i></a>
+                </div> 
+            </div>  
+        </header>
+        <div id="videomusic">
+            <div class="content">
+                {% block content %}
+
+                {% include 'music/music_videos.html'%}
+
+                {% endblock content %}
+            </div>
+        </div>
+
+        <script src="{% static 'js/jquery.min.js'%}"></script>
+        <script src="{% static 'js/popper.js'%}"></script>
+        <script src="{% static 'js/main.js'%}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    </body>
+</html>

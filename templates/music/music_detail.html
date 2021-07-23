@@ -1,0 +1,14 @@
+{% load embed_video_tags%}
+
+{%block content %}
+
+<div class="container" style="background:whitesmoke;">
+    <div class="mt-5 px-5">
+        <p style="text-align: center;font-size:40px;"> Culte </p>
+        
+        {% video object.video 'small' %}
+        
+    </div>
+</div>
+
+{% endblock content%}
